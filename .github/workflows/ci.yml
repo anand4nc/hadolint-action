@@ -27,7 +27,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t $TEST_IMAGE_NAME .
 
-      - name: Run Structure tests
+      - name: Run Structure tests and runs
         uses: brpaz/structure-tests-action@v1.1.2
         with:
           image: ${{ env.TEST_IMAGE_NAME }}
